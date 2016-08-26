@@ -1,6 +1,0 @@
-framework module YAMLFrameworkOrdered {
-  umbrella header "YAMLFrameworkOrdered.h"
-
-  export *
-  module * { export * }
-}

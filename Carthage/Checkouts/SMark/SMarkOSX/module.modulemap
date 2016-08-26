@@ -1,6 +1,0 @@
-framework module SMark {
-    umbrella header "SMarkOSX.h"
-        
-    export *
-    module * { export * }
-}
