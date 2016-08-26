@@ -1,0 +1,839 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16C75BE71D6FD9930082DA10 /* SMarkDown.h in Headers */ = {isa = PBXBuildFile; fileRef = 16C75BE61D6FD9930082DA10 /* SMarkDown.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16C75BEE1D6FD9930082DA10 /* SMarkDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75BE31D6FD9930082DA10 /* SMarkDown.framework */; };
+		16C75C051D6FD9BB0082DA10 /* SMarkDownOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 16C75C041D6FD9BB0082DA10 /* SMarkDownOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16C75C0C1D6FD9BB0082DA10 /* SMarkDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C021D6FD9BB0082DA10 /* SMarkDown.framework */; };
+		16C75C1C1D6FD9EA0082DA10 /* Handlebars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C191D6FD9EA0082DA10 /* Handlebars.framework */; };
+		16C75C1D1D6FD9EA0082DA10 /* Handlebars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C191D6FD9EA0082DA10 /* Handlebars.framework */; };
+		16C75C1E1D6FD9EA0082DA10 /* SMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C1A1D6FD9EA0082DA10 /* SMark.framework */; };
+		16C75C1F1D6FD9EA0082DA10 /* SMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C1A1D6FD9EA0082DA10 /* SMark.framework */; };
+		16C75C201D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C1B1D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework */; };
+		16C75C211D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C1B1D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework */; };
+		16C75C231D6FDA090082DA10 /* Handlebars.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16C75C191D6FD9EA0082DA10 /* Handlebars.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16C75C241D6FDA090082DA10 /* SMark.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16C75C1A1D6FD9EA0082DA10 /* SMark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16C75C251D6FDA090082DA10 /* YAMLFrameworkOrdered.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16C75C1B1D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16C75C291D6FDA1A0082DA10 /* Handlebars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C261D6FDA1A0082DA10 /* Handlebars.framework */; };
+		16C75C2A1D6FDA1A0082DA10 /* Handlebars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C261D6FDA1A0082DA10 /* Handlebars.framework */; };
+		16C75C2B1D6FDA1A0082DA10 /* SMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C271D6FDA1A0082DA10 /* SMark.framework */; };
+		16C75C2C1D6FDA1A0082DA10 /* SMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C271D6FDA1A0082DA10 /* SMark.framework */; };
+		16C75C2D1D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C281D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework */; };
+		16C75C2E1D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C75C281D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework */; };
+		16C75C301D6FDA320082DA10 /* Handlebars.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16C75C261D6FDA1A0082DA10 /* Handlebars.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16C75C311D6FDA320082DA10 /* SMark.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16C75C271D6FDA1A0082DA10 /* SMark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16C75C321D6FDA320082DA10 /* YAMLFrameworkOrdered.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16C75C281D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16C75C381D6FDA490082DA10 /* ConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C341D6FDA490082DA10 /* ConfiguratorTests.swift */; };
+		16C75C391D6FDA490082DA10 /* frontmatter in Resources */ = {isa = PBXBuildFile; fileRef = 16C75C351D6FDA490082DA10 /* frontmatter */; };
+		16C75C3C1D6FDA490082DA10 /* ScriptsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C361D6FDA490082DA10 /* ScriptsTest.swift */; };
+		16C75C3D1D6FDA4F0082DA10 /* ConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C341D6FDA490082DA10 /* ConfiguratorTests.swift */; };
+		16C75C3E1D6FDA4F0082DA10 /* ScriptsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C361D6FDA490082DA10 /* ScriptsTest.swift */; };
+		16C75C3F1D6FDA540082DA10 /* frontmatter in Resources */ = {isa = PBXBuildFile; fileRef = 16C75C351D6FDA490082DA10 /* frontmatter */; };
+		16C75C481D6FDA5F0082DA10 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C411D6FDA5F0082DA10 /* Configurator.swift */; };
+		16C75C4A1D6FDA5F0082DA10 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C421D6FDA5F0082DA10 /* Extensions.swift */; };
+		16C75C4C1D6FDA5F0082DA10 /* HTMLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C431D6FDA5F0082DA10 /* HTMLTable.swift */; };
+		16C75C4E1D6FDA5F0082DA10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C441D6FDA5F0082DA10 /* Renderer.swift */; };
+		16C75C501D6FDA5F0082DA10 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C451D6FDA5F0082DA10 /* Resource.swift */; };
+		16C75C521D6FDA5F0082DA10 /* Scripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C461D6FDA5F0082DA10 /* Scripts.swift */; };
+		16C75C541D6FDA5F0082DA10 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C471D6FDA5F0082DA10 /* StringUtils.swift */; };
+		16C75C561D6FDA640082DA10 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C411D6FDA5F0082DA10 /* Configurator.swift */; };
+		16C75C571D6FDA640082DA10 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C421D6FDA5F0082DA10 /* Extensions.swift */; };
+		16C75C581D6FDA640082DA10 /* HTMLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C431D6FDA5F0082DA10 /* HTMLTable.swift */; };
+		16C75C591D6FDA640082DA10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C441D6FDA5F0082DA10 /* Renderer.swift */; };
+		16C75C5A1D6FDA640082DA10 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C451D6FDA5F0082DA10 /* Resource.swift */; };
+		16C75C5B1D6FDA640082DA10 /* Scripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C461D6FDA5F0082DA10 /* Scripts.swift */; };
+		16C75C5C1D6FDA640082DA10 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75C471D6FDA5F0082DA10 /* StringUtils.swift */; };
+		16C76D781D6FE2C60082DA10 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 16C76D771D6FE2C60082DA10 /* Resource */; };
+		16C76D791D6FE2C60082DA10 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 16C76D771D6FE2C60082DA10 /* Resource */; };
+		16C76D801D7006830082DA10 /* PDFKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C76D7F1D7006830082DA10 /* PDFKit.swift */; };
+		16C76D811D7006830082DA10 /* PDFKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C76D7F1D7006830082DA10 /* PDFKit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16C75BEF1D6FD9930082DA10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16C75BDA1D6FD9930082DA10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16C75BE21D6FD9930082DA10;
+			remoteInfo = SMarkDown;
+		};
+		16C75C0D1D6FD9BB0082DA10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16C75BDA1D6FD9930082DA10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16C75C011D6FD9BB0082DA10;
+			remoteInfo = SMarkDownOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		16C75C221D6FDA010082DA10 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				16C75C231D6FDA090082DA10 /* Handlebars.framework in CopyFiles */,
+				16C75C241D6FDA090082DA10 /* SMark.framework in CopyFiles */,
+				16C75C251D6FDA090082DA10 /* YAMLFrameworkOrdered.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75C2F1D6FDA280082DA10 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				16C75C301D6FDA320082DA10 /* Handlebars.framework in CopyFiles */,
+				16C75C311D6FDA320082DA10 /* SMark.framework in CopyFiles */,
+				16C75C321D6FDA320082DA10 /* YAMLFrameworkOrdered.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		16C75BE31D6FD9930082DA10 /* SMarkDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMarkDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16C75BE61D6FD9930082DA10 /* SMarkDown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMarkDown.h; sourceTree = "<group>"; };
+		16C75BE81D6FD9930082DA10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C75BED1D6FD9930082DA10 /* SMarkDownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMarkDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16C75BF41D6FD9930082DA10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C75C021D6FD9BB0082DA10 /* SMarkDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMarkDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16C75C041D6FD9BB0082DA10 /* SMarkDownOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMarkDownOSX.h; sourceTree = "<group>"; };
+		16C75C061D6FD9BB0082DA10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C75C0B1D6FD9BB0082DA10 /* SMarkDownOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMarkDownOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16C75C121D6FD9BB0082DA10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C75C191D6FD9EA0082DA10 /* Handlebars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Handlebars.framework; path = Carthage/Build/iOS/Handlebars.framework; sourceTree = SOURCE_ROOT; };
+		16C75C1A1D6FD9EA0082DA10 /* SMark.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMark.framework; path = Carthage/Build/iOS/SMark.framework; sourceTree = SOURCE_ROOT; };
+		16C75C1B1D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAMLFrameworkOrdered.framework; path = Carthage/Build/iOS/YAMLFrameworkOrdered.framework; sourceTree = SOURCE_ROOT; };
+		16C75C261D6FDA1A0082DA10 /* Handlebars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Handlebars.framework; path = Carthage/Build/Mac/Handlebars.framework; sourceTree = SOURCE_ROOT; };
+		16C75C271D6FDA1A0082DA10 /* SMark.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMark.framework; path = Carthage/Build/Mac/SMark.framework; sourceTree = SOURCE_ROOT; };
+		16C75C281D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAMLFrameworkOrdered.framework; path = Carthage/Build/Mac/YAMLFrameworkOrdered.framework; sourceTree = SOURCE_ROOT; };
+		16C75C341D6FDA490082DA10 /* ConfiguratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguratorTests.swift; sourceTree = "<group>"; };
+		16C75C351D6FDA490082DA10 /* frontmatter */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = frontmatter; sourceTree = "<group>"; };
+		16C75C361D6FDA490082DA10 /* ScriptsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptsTest.swift; sourceTree = "<group>"; };
+		16C75C411D6FDA5F0082DA10 /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		16C75C421D6FDA5F0082DA10 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		16C75C431D6FDA5F0082DA10 /* HTMLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLTable.swift; sourceTree = "<group>"; };
+		16C75C441D6FDA5F0082DA10 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		16C75C451D6FDA5F0082DA10 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		16C75C461D6FDA5F0082DA10 /* Scripts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scripts.swift; sourceTree = "<group>"; };
+		16C75C471D6FDA5F0082DA10 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		16C76D771D6FE2C60082DA10 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = SOURCE_ROOT; };
+		16C76D7F1D7006830082DA10 /* PDFKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKit.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16C75BDF1D6FD9930082DA10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C1C1D6FD9EA0082DA10 /* Handlebars.framework in Frameworks */,
+				16C75C201D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework in Frameworks */,
+				16C75C1E1D6FD9EA0082DA10 /* SMark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75BEA1D6FD9930082DA10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C211D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework in Frameworks */,
+				16C75C1D1D6FD9EA0082DA10 /* Handlebars.framework in Frameworks */,
+				16C75BEE1D6FD9930082DA10 /* SMarkDown.framework in Frameworks */,
+				16C75C1F1D6FD9EA0082DA10 /* SMark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75BFE1D6FD9BB0082DA10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C291D6FDA1A0082DA10 /* Handlebars.framework in Frameworks */,
+				16C75C2D1D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework in Frameworks */,
+				16C75C2B1D6FDA1A0082DA10 /* SMark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75C081D6FD9BB0082DA10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C2E1D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework in Frameworks */,
+				16C75C2A1D6FDA1A0082DA10 /* Handlebars.framework in Frameworks */,
+				16C75C0C1D6FD9BB0082DA10 /* SMarkDown.framework in Frameworks */,
+				16C75C2C1D6FDA1A0082DA10 /* SMark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16C75BD91D6FD9930082DA10 = {
+			isa = PBXGroup;
+			children = (
+				16C75C401D6FDA5F0082DA10 /* Source */,
+				16C75C331D6FDA490082DA10 /* Tests */,
+				16C75BE51D6FD9930082DA10 /* SMarkDown */,
+				16C75BF11D6FD9930082DA10 /* SMarkDownTests */,
+				16C75C031D6FD9BB0082DA10 /* SMarkDownOSX */,
+				16C75C0F1D6FD9BB0082DA10 /* SMarkDownOSXTests */,
+				16C75BE41D6FD9930082DA10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16C75BE41D6FD9930082DA10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16C75BE31D6FD9930082DA10 /* SMarkDown.framework */,
+				16C75BED1D6FD9930082DA10 /* SMarkDownTests.xctest */,
+				16C75C021D6FD9BB0082DA10 /* SMarkDown.framework */,
+				16C75C0B1D6FD9BB0082DA10 /* SMarkDownOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16C75BE51D6FD9930082DA10 /* SMarkDown */ = {
+			isa = PBXGroup;
+			children = (
+				16C75C191D6FD9EA0082DA10 /* Handlebars.framework */,
+				16C75C1A1D6FD9EA0082DA10 /* SMark.framework */,
+				16C75C1B1D6FD9EA0082DA10 /* YAMLFrameworkOrdered.framework */,
+				16C75BE61D6FD9930082DA10 /* SMarkDown.h */,
+				16C75BE81D6FD9930082DA10 /* Info.plist */,
+			);
+			path = SMarkDown;
+			sourceTree = "<group>";
+		};
+		16C75BF11D6FD9930082DA10 /* SMarkDownTests */ = {
+			isa = PBXGroup;
+			children = (
+				16C75BF41D6FD9930082DA10 /* Info.plist */,
+			);
+			path = SMarkDownTests;
+			sourceTree = "<group>";
+		};
+		16C75C031D6FD9BB0082DA10 /* SMarkDownOSX */ = {
+			isa = PBXGroup;
+			children = (
+				16C75C261D6FDA1A0082DA10 /* Handlebars.framework */,
+				16C75C271D6FDA1A0082DA10 /* SMark.framework */,
+				16C75C281D6FDA1A0082DA10 /* YAMLFrameworkOrdered.framework */,
+				16C75C041D6FD9BB0082DA10 /* SMarkDownOSX.h */,
+				16C75C061D6FD9BB0082DA10 /* Info.plist */,
+			);
+			path = SMarkDownOSX;
+			sourceTree = "<group>";
+		};
+		16C75C0F1D6FD9BB0082DA10 /* SMarkDownOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				16C75C121D6FD9BB0082DA10 /* Info.plist */,
+			);
+			path = SMarkDownOSXTests;
+			sourceTree = "<group>";
+		};
+		16C75C331D6FDA490082DA10 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				16C75C341D6FDA490082DA10 /* ConfiguratorTests.swift */,
+				16C75C351D6FDA490082DA10 /* frontmatter */,
+				16C75C361D6FDA490082DA10 /* ScriptsTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		16C75C401D6FDA5F0082DA10 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				16C76D771D6FE2C60082DA10 /* Resource */,
+				16C75C411D6FDA5F0082DA10 /* Configurator.swift */,
+				16C76D7F1D7006830082DA10 /* PDFKit.swift */,
+				16C75C421D6FDA5F0082DA10 /* Extensions.swift */,
+				16C75C431D6FDA5F0082DA10 /* HTMLTable.swift */,
+				16C75C441D6FDA5F0082DA10 /* Renderer.swift */,
+				16C75C451D6FDA5F0082DA10 /* Resource.swift */,
+				16C75C461D6FDA5F0082DA10 /* Scripts.swift */,
+				16C75C471D6FDA5F0082DA10 /* StringUtils.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		16C75BE01D6FD9930082DA10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75BE71D6FD9930082DA10 /* SMarkDown.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75BFF1D6FD9BB0082DA10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C051D6FD9BB0082DA10 /* SMarkDownOSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		16C75BE21D6FD9930082DA10 /* SMarkDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16C75BF71D6FD9930082DA10 /* Build configuration list for PBXNativeTarget "SMarkDown" */;
+			buildPhases = (
+				16C75C5D1D6FDD490082DA10 /* ShellScript */,
+				16C75BDE1D6FD9930082DA10 /* Sources */,
+				16C75BDF1D6FD9930082DA10 /* Frameworks */,
+				16C75BE01D6FD9930082DA10 /* Headers */,
+				16C75BE11D6FD9930082DA10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMarkDown;
+			productName = SMarkDown;
+			productReference = 16C75BE31D6FD9930082DA10 /* SMarkDown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		16C75BEC1D6FD9930082DA10 /* SMarkDownTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16C75BFA1D6FD9930082DA10 /* Build configuration list for PBXNativeTarget "SMarkDownTests" */;
+			buildPhases = (
+				16C75BE91D6FD9930082DA10 /* Sources */,
+				16C75BEA1D6FD9930082DA10 /* Frameworks */,
+				16C75BEB1D6FD9930082DA10 /* Resources */,
+				16C75C221D6FDA010082DA10 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16C75BF01D6FD9930082DA10 /* PBXTargetDependency */,
+			);
+			name = SMarkDownTests;
+			productName = SMarkDownTests;
+			productReference = 16C75BED1D6FD9930082DA10 /* SMarkDownTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16C75C011D6FD9BB0082DA10 /* SMarkDownOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16C75C171D6FD9BB0082DA10 /* Build configuration list for PBXNativeTarget "SMarkDownOSX" */;
+			buildPhases = (
+				16C75C5E1D6FDD830082DA10 /* ShellScript */,
+				16C75BFD1D6FD9BB0082DA10 /* Sources */,
+				16C75BFE1D6FD9BB0082DA10 /* Frameworks */,
+				16C75BFF1D6FD9BB0082DA10 /* Headers */,
+				16C75C001D6FD9BB0082DA10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMarkDownOSX;
+			productName = SMarkDownOSX;
+			productReference = 16C75C021D6FD9BB0082DA10 /* SMarkDown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		16C75C0A1D6FD9BB0082DA10 /* SMarkDownOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16C75C181D6FD9BB0082DA10 /* Build configuration list for PBXNativeTarget "SMarkDownOSXTests" */;
+			buildPhases = (
+				16C75C071D6FD9BB0082DA10 /* Sources */,
+				16C75C081D6FD9BB0082DA10 /* Frameworks */,
+				16C75C091D6FD9BB0082DA10 /* Resources */,
+				16C75C2F1D6FDA280082DA10 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16C75C0E1D6FD9BB0082DA10 /* PBXTargetDependency */,
+			);
+			name = SMarkDownOSXTests;
+			productName = SMarkDownOSXTests;
+			productReference = 16C75C0B1D6FD9BB0082DA10 /* SMarkDownOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16C75BDA1D6FD9930082DA10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = LawLincoln;
+				TargetAttributes = {
+					16C75BE21D6FD9930082DA10 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					16C75BEC1D6FD9930082DA10 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					16C75C011D6FD9BB0082DA10 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					16C75C0A1D6FD9BB0082DA10 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 16C75BDD1D6FD9930082DA10 /* Build configuration list for PBXProject "SMarkDown" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 16C75BD91D6FD9930082DA10;
+			productRefGroup = 16C75BE41D6FD9930082DA10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16C75BE21D6FD9930082DA10 /* SMarkDown */,
+				16C75BEC1D6FD9930082DA10 /* SMarkDownTests */,
+				16C75C011D6FD9BB0082DA10 /* SMarkDownOSX */,
+				16C75C0A1D6FD9BB0082DA10 /* SMarkDownOSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16C75BE11D6FD9930082DA10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C76D781D6FE2C60082DA10 /* Resource in Resources */,
+				16C75C3F1D6FDA540082DA10 /* frontmatter in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75BEB1D6FD9930082DA10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75C001D6FD9BB0082DA10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C76D791D6FE2C60082DA10 /* Resource in Resources */,
+				16C75C391D6FDA490082DA10 /* frontmatter in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75C091D6FD9BB0082DA10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16C75C5D1D6FDD490082DA10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $SRCROOT/Scripts && ./script_manager.sh";
+		};
+		16C75C5E1D6FDD830082DA10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $SRCROOT/Scripts && ./script_manager.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16C75BDE1D6FD9930082DA10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C5B1D6FDA640082DA10 /* Scripts.swift in Sources */,
+				16C76D801D7006830082DA10 /* PDFKit.swift in Sources */,
+				16C75C591D6FDA640082DA10 /* Renderer.swift in Sources */,
+				16C75C561D6FDA640082DA10 /* Configurator.swift in Sources */,
+				16C75C571D6FDA640082DA10 /* Extensions.swift in Sources */,
+				16C75C5A1D6FDA640082DA10 /* Resource.swift in Sources */,
+				16C75C581D6FDA640082DA10 /* HTMLTable.swift in Sources */,
+				16C75C5C1D6FDA640082DA10 /* StringUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75BE91D6FD9930082DA10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C3E1D6FDA4F0082DA10 /* ScriptsTest.swift in Sources */,
+				16C75C3D1D6FDA4F0082DA10 /* ConfiguratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75BFD1D6FD9BB0082DA10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C521D6FDA5F0082DA10 /* Scripts.swift in Sources */,
+				16C76D811D7006830082DA10 /* PDFKit.swift in Sources */,
+				16C75C4E1D6FDA5F0082DA10 /* Renderer.swift in Sources */,
+				16C75C481D6FDA5F0082DA10 /* Configurator.swift in Sources */,
+				16C75C4A1D6FDA5F0082DA10 /* Extensions.swift in Sources */,
+				16C75C501D6FDA5F0082DA10 /* Resource.swift in Sources */,
+				16C75C4C1D6FDA5F0082DA10 /* HTMLTable.swift in Sources */,
+				16C75C541D6FDA5F0082DA10 /* StringUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16C75C071D6FD9BB0082DA10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C75C3C1D6FDA490082DA10 /* ScriptsTest.swift in Sources */,
+				16C75C381D6FDA490082DA10 /* ConfiguratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16C75BF01D6FD9930082DA10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16C75BE21D6FD9930082DA10 /* SMarkDown */;
+			targetProxy = 16C75BEF1D6FD9930082DA10 /* PBXContainerItemProxy */;
+		};
+		16C75C0E1D6FD9BB0082DA10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16C75C011D6FD9BB0082DA10 /* SMarkDownOSX */;
+			targetProxy = 16C75C0D1D6FD9BB0082DA10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16C75BF51D6FD9930082DA10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		16C75BF61D6FD9930082DA10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		16C75BF81D6FD9930082DA10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SMarkDown/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.SMarkDown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		16C75BF91D6FD9930082DA10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SMarkDown/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.SMarkDown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		16C75BFB1D6FD9930082DA10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SMarkDownTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.SMarkDownTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		16C75BFC1D6FD9930082DA10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SMarkDownTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.SMarkDownTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		16C75C131D6FD9BB0082DA10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SMarkDownOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.SMarkDownOSX;
+				PRODUCT_NAME = SMarkDown;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		16C75C141D6FD9BB0082DA10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SMarkDownOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.SMarkDownOSX;
+				PRODUCT_NAME = SMarkDown;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		16C75C151D6FD9BB0082DA10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SMarkDownOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.SMarkDownOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		16C75C161D6FD9BB0082DA10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SMarkDownOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.SMarkDownOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16C75BDD1D6FD9930082DA10 /* Build configuration list for PBXProject "SMarkDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C75BF51D6FD9930082DA10 /* Debug */,
+				16C75BF61D6FD9930082DA10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16C75BF71D6FD9930082DA10 /* Build configuration list for PBXNativeTarget "SMarkDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C75BF81D6FD9930082DA10 /* Debug */,
+				16C75BF91D6FD9930082DA10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16C75BFA1D6FD9930082DA10 /* Build configuration list for PBXNativeTarget "SMarkDownTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C75BFB1D6FD9930082DA10 /* Debug */,
+				16C75BFC1D6FD9930082DA10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16C75C171D6FD9BB0082DA10 /* Build configuration list for PBXNativeTarget "SMarkDownOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C75C131D6FD9BB0082DA10 /* Debug */,
+				16C75C141D6FD9BB0082DA10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16C75C181D6FD9BB0082DA10 /* Build configuration list for PBXNativeTarget "SMarkDownOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C75C151D6FD9BB0082DA10 /* Debug */,
+				16C75C161D6FD9BB0082DA10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16C75BDA1D6FD9930082DA10 /* Project object */;
+}

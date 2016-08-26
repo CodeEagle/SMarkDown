@@ -1,0 +1,6 @@
+framework module Handlebars {
+  umbrella header "Handlebars.h"
+
+  export *
+  module * { export * }
+}
