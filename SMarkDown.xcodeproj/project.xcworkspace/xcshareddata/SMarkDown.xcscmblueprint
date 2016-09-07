@@ -1,30 +1,30 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3B1A235A7A479030BACC2C56AC63E3085C27271C",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "040F86E19BE573679C8A2CE797B2AD57AFE4C4E8",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "3B1A235A7A479030BACC2C56AC63E3085C27271C" : 0,
-    "2F1767954F6E41A8A969AD0C1FD6055664A8E4E6" : 0
+    "2F1767954F6E41A8A969AD0C1FD6055664A8E4E6" : 0,
+    "040F86E19BE573679C8A2CE797B2AD57AFE4C4E8" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C321430E-BF7D-4B28-AA6C-97EA21E046D1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "3B1A235A7A479030BACC2C56AC63E3085C27271C" : "SMarkDown\/",
-    "2F1767954F6E41A8A969AD0C1FD6055664A8E4E6" : "SMarkDown\/Resource\/prism\/"
+    "2F1767954F6E41A8A969AD0C1FD6055664A8E4E6" : "SMarkDown\/Resource\/prism\/",
+    "040F86E19BE573679C8A2CE797B2AD57AFE4C4E8" : "SMarkDown\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "SMarkDown",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SMarkDown.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CodeEagle\/SMarkDown.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "040F86E19BE573679C8A2CE797B2AD57AFE4C4E8"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PrismJS\/prism.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2F1767954F6E41A8A969AD0C1FD6055664A8E4E6"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CodeEagle\/SMarkDown.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B1A235A7A479030BACC2C56AC63E3085C27271C"
     }
   ]
 }
