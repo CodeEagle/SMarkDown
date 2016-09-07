@@ -188,7 +188,7 @@ extension Scripts {
             let flowchatInit = Resource.Flowchartsequence.FlowchartInitJs.javascript(embeded: true)
             scripts.appendContentsOf([flowchart, flowchatInit])
         }
-        if languages.contains("seq") {
+        if languages.contains("seq") || languages.contains("sequence") {
             let under = Resource.Flowchartsequence.UnderscoreMinJs.javascript
             let seq = Resource.Flowchartsequence.SequenceDiagramMinJs.javascript
             let seqInit = Resource.Flowchartsequence.SequenceDiagramInitJs.javascript(embeded: true)

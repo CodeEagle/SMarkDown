@@ -20,6 +20,7 @@ public extension String {
 public final class Configurator {
     private enum Keys: String { case tags = "tags", extensions = "extensions", codeBlockAccessory = "codeBlockAccessory", tocRenderEnable = "tocRenderEnable", htmlTemplate = "htmlTemplate", htmlStyle = "htmlStyle", htmlHighlightingTheme = "htmlHighlightingTheme", htmlSyntaxHighlighting = "htmlSyntaxHighlighting", smartypantsEnable = "smartypantsEnable", frontMatterDecodeEnable = "frontMatterDecodeEnable", storeKey = "SMarkConfigurator"
     }
+    private var initing = false
     public var tags: [SMark.HTML.Tag] = [] { didSet { parserRenderSave() } }
     public var extensions: [SMark.HTML.Extension] = [] { didSet { parseAndSave() } }
     public var codeBlockAccessory: SMark.CodeBlockAccessory = .none { didSet { renderAndSave() } }
@@ -41,17 +42,24 @@ public final class Configurator {
     }
     lazy var htmlTemplateRaw: String = self.htmlTemplate.fullPath.pathContent
     
-    private init() { loadUserConfigure() }
+    private init() {
+        initing = true
+        loadUserConfigure()
+        initing = false
+    }
     
     private func parseAndSave() {
+        if initing { return }
         storeConfigure()
         renderer.parserCurrentDocument()
     }
     private func renderAndSave() {
+        if initing { return }
         storeConfigure()
         renderer.renderCurrnetDocument()
     }
     private func parserRenderSave() {
+        if initing { return }
         storeConfigure()
         renderer.parserCurrentDocument()
         renderer.renderCurrnetDocument()
@@ -146,4 +154,4 @@ public struct SMark {
 }
 
 
- 
+
