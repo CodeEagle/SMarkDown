@@ -12,12 +12,12 @@ import YAMLFrameworkOrdered
 private struct Constant {
     static var escape = HBEscapingFunctions.htmlEscapingFunction()
     static var arrayTemplate = "<table><tbody><tr>{{#each objects}}<td>{{{HTMLTable this}}}</td>{{/each}}</tr></tbody></table>"
-    static var helper: [NSObject : AnyObject] = {
+    static var helper: [AnyHashable: Any] = {
         var block : @convention(block) (HBHelperCallingInfo) -> NSString = {
             (info : HBHelperCallingInfo) -> NSString in
-            return (info.positionalParameters[safe: 0] as? NSObject)?.HTMLTable ?? ""
+            return (info.positionalParameters[safe: 0] as? NSObject)?.HTMLTable as NSString? ?? ""
         }
-        return ["HTMLTable": unsafeBitCast(block, AnyObject.self)]
+        return ["HTMLTable": unsafeBitCast(block, to: AnyObject.self)]
     }()
     
     static var dictTemplate = "<table><thead><tr>{{#each keys}}<th>{{{HTMLTable this}}}</th>{{/each}}</tr></thead><tbody><tr>{{#each objects}}<td>{{{HTMLTable this}}}</td>{{/each}}</tr></tbody></table>"
@@ -27,11 +27,17 @@ private struct Constant {
 }
 
 private var escape: HBEscapingFunction? = nil
-private var token: dispatch_once_t = 0
+private var token: Int = 0
 extension NSObject {
     
     var HTMLTable: String {
-        return Constant.escape(description) ?? ""
+        if let obj = self as? M13OrderedDictionary<NSString,AnyObject> {
+            let template = Constant.m13Template
+            let context = ["objects" : obj.allObjects, "keys": obj.allKeys] as [String : Any]
+            let table = try? HBHandlebars.renderTemplateString(template, withContext: context, withHelperBlocks: Constant.helper)
+            return table ?? ""
+        }
+        return Constant.escape!(description) ?? ""
     }
     
     func validKeysForHandlebars() -> [String] { return ["HTMLTable"] }
@@ -60,11 +66,4 @@ extension NSDictionary {
     }
 }
 
-extension M13OrderedDictionary {
-    override var HTMLTable: String {
-        let template = Constant.m13Template
-        let context = ["objects" : allObjects, "keys": allKeys]
-        let table = try? HBHandlebars.renderTemplateString(template, withContext: context, withHelperBlocks: Constant.helper)
-        return table ?? ""
-    }
-}
+

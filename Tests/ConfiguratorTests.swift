@@ -22,10 +22,10 @@ class ConfiguratorTests: XCTestCase {
         assert(Configurator.shared.tags == [.useTaskList, .blockcodeLineNumber], "not equal to store")
     }
     
-    func asyncTest(timeout: NSTimeInterval = 60, block: (XCTestExpectation) -> ()) {
-        let expectation: XCTestExpectation = expectationWithDescription("Swift Expectations")
+    func asyncTest(_ timeout: TimeInterval = 60, block: (XCTestExpectation) -> ()) {
+        let expectation: XCTestExpectation = self.expectation(description: "Swift Expectations")
         block(expectation)
-        waitForExpectationsWithTimeout(timeout) { (error) -> Void in
+        waitForExpectations(timeout: timeout) { (error) -> Void in
             if error != nil {
                 XCTFail("time out: \(error)")
             } else {
@@ -39,7 +39,7 @@ class ConfiguratorTests: XCTestCase {
         configure.tocRenderEnable = true
         configure.tags = [.useTaskList]
         configure.extensions = [.footnotes, .tables, .fencedCode, .math, .mathExplicit]
-        if let path = NSBundle(forClass: Renderer.self).pathForResource("frontmatter", ofType: nil) {
+        if let path = Bundle(for: Renderer.self).path(forResource: "frontmatter", ofType: nil) {
             do {
                 let content = try String(contentsOfFile: path)
                 let html = content.htmlWith(title: "Test", forExport: false)
@@ -48,14 +48,14 @@ class ConfiguratorTests: XCTestCase {
         }
     }
     
-    func updatePreview(content: String) {
+    func updatePreview(_ content: String) {
         let path = NSTemporaryDirectory() + "preview.html"
-        guard let data = content.dataUsingEncoding(NSUTF8StringEncoding) else { return }
+        guard let data = content.data(using: String.Encoding.utf8) else { return }
         do {
             print(path)
-            try data.writeToFile(path, options: .AtomicWrite)
+            try data.write(to: URL(fileURLWithPath: path), options: .atomicWrite)
             #if os(OSX)
-                let task = NSTask()
+                let task = Process()
                 task.launchPath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
                 task.arguments = [" ", path]
                 task.launch()

@@ -10,7 +10,7 @@ import Foundation
 import Handlebars
 protocol HTMLConvertible {
     var assetType: Scripts.ContentType { get }
-    var assetURL: NSURL { get }
+    var assetURL: URL { get }
     var embedded: Bool { get }
     func html(for option: Scripts.Option) -> String?
 }
@@ -23,10 +23,10 @@ extension HTMLConvertible {
         func fulllink() { context[Scripts.Keys.url.rawValue] = assetURL.absoluteString }
         switch realOption  {
         case .embedded:
-            guard assetURL.fileURL else { fulllink(); break }
-            guard var text = assetURL.path?.pathContent else  { break }
+            guard assetURL.isFileURL else { fulllink(); break }
+            var text = assetURL.path.pathContent
             if text.hasSuffix("\n") {
-                text = text.substringToIndex(text.endIndex.advancedBy(-1))
+                text = text.substring(to: text.characters.index(text.endIndex, offsetBy: -1))
             }
             context[Scripts.Keys.content.rawValue] = text
         case .fulllink: fulllink()
@@ -38,7 +38,7 @@ extension HTMLConvertible {
 }
 // MARK: - Scripts
 struct Scripts {
-    private enum Keys: String { case typeName = "typeName", content = "content", url = "url" }
+    fileprivate enum Keys: String { case typeName = "typeName", content = "content", url = "url" }
     enum Option { case none, embedded, fulllink }
     enum ContentType: String {
         case plainText = "text/plain", styleSheet = "text/css", javascript = "text/javascript", mathjax = "text/x-mathjax-config"
@@ -46,10 +46,10 @@ struct Scripts {
     
     // MARK: StyleSheet
     struct StyleSheet: HTMLConvertible {
-        var assetURL: NSURL
+        var assetURL: URL
         var assetType: ContentType = .styleSheet
         var embedded: Bool = false
-        init(asset url: NSURL) { assetURL = url }
+        init(asset url: URL) { assetURL = url }
         
         func html(for option: Scripts.Option) -> String? {
             var template: String? = nil
@@ -57,13 +57,13 @@ struct Scripts {
             let fulllink =  "<link rel=\"stylesheet\" type=\"{{ \(typeName) }}\" href=\"{{ \(Scripts.Keys.url.rawValue) }}\">"
             switch option {
             case .embedded:
-                guard assetURL.fileURL else { template = fulllink; break }
+                guard assetURL.isFileURL else { template = fulllink; break }
                 template =  "<style type=\"{{ \(typeName) }}\">\n{{{ \(Keys.content.rawValue) }}}\n</style>"
             case .fulllink: template = fulllink
             default: break
             }
             let ctx = context(for: option)
-            guard let t = template where ctx.count > 0 else { return nil }
+            guard let t = template , ctx.count > 0 else { return nil }
             do {
                 let result  = try HBHandlebars.renderTemplateString(t, withContext: ctx)
                 return result
@@ -73,11 +73,11 @@ struct Scripts {
     
     // MARK: JavaScript
     struct JavaScript: HTMLConvertible {
-        var assetURL: NSURL
+        var assetURL: URL
         var assetType: ContentType
         var embedded = false
 
-        init(asset url: NSURL, type: ContentType = .javascript, embeded script: Bool = false) {
+        init(asset url: URL, type: ContentType = .javascript, embeded script: Bool = false) {
             assetURL = url
             assetType = type
             embedded = script
@@ -90,13 +90,13 @@ struct Scripts {
             let fullinkTemplate = "<script type=\"{{ \(typeName) }}\" src=\"{{ \(Scripts.Keys.url.rawValue) }}\"></script>"
             switch finalOption {
             case .embedded:
-                guard assetURL.fileURL else { template = fullinkTemplate; break }
+                guard assetURL.isFileURL else { template = fullinkTemplate; break }
                 template =  "<script type=\"{{ \(typeName) }}\">\n{{{ \(Keys.content.rawValue) }}}\n</script>"
             case .fulllink: template = fullinkTemplate
             default: break
             }
             let ctx = context(for: option)
-            guard let t = template where ctx.count > 0 else { return nil }
+            guard let t = template , ctx.count > 0 else { return nil }
             do {
                 let result  = try HBHandlebars.renderTemplateString(t, withContext: ctx)
                 return result
@@ -110,7 +110,7 @@ extension Scripts {
     static var stylesheets: [StyleSheet] {
         var css = baseStylesheets
         if Configurator.shared.htmlSyntaxHighlighting {
-            css.appendContentsOf(prismStylesheets)
+            css.append(contentsOf: prismStylesheets)
         }
         if Configurator.shared.codeBlockAccessory == .custom {
             css.append(Resource.Extensions.ShowInformationCss.stylesheet)
@@ -120,7 +120,7 @@ extension Scripts {
     
     static var baseStylesheets: [StyleSheet] {
         guard let url = Configurator.shared.htmlStyle?.fileURL else { return [] }
-        return [StyleSheet(asset: url)]
+        return [StyleSheet(asset: url as URL)]
     }
     
     static var prismStylesheets: [StyleSheet] {
@@ -144,9 +144,9 @@ extension Scripts {
     static var scripts: [JavaScript] {
         var scripts = [JavaScript]()
         if Configurator.shared.usingTaskList { scripts.append(Resource.Extensions.TasklistJs.javascript) }
-        scripts.appendContentsOf(prismScripts)
-        scripts.appendContentsOf(mathjaxScripts)
-        scripts.appendContentsOf(chartAndSequenceScripts)
+        scripts.append(contentsOf: prismScripts)
+        scripts.append(contentsOf: mathjaxScripts)
+        scripts.append(contentsOf: chartAndSequenceScripts)
         return scripts
     }
     
@@ -159,7 +159,7 @@ extension Scripts {
         let languages = configurator.currentLanguages//.flatMap { (name) -> [JavaScript]? in return Resource.Prism.Components.scripts(for: name) }.flatten().flatMap({$0})
 //        scripts.appendContentsOf(languages)
         for name in languages {
-            scripts.appendContentsOf(Resource.Prism.Components.scripts(for: name))
+            scripts.append(contentsOf: Resource.Prism.Components.scripts(for: name))
         }
         if configurator.showLineNumber {
             let lineJs = Resource.Prism.Plugins.Linenumbers.PrismLineNumbersJs.javascript
@@ -177,7 +177,7 @@ extension Scripts {
         var scripts = [JavaScript]()
         let embeded = Resource.Mathjax.InitJs.javascript(.mathjax, embeded: true)
         scripts.append(embeded)
-        if let main = NSURL(string: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML") {
+        if let main = URL(string: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML") {
             scripts.append(JavaScript(asset: main))
         }
         return scripts
@@ -189,17 +189,17 @@ extension Scripts {
         if languages.contains("flow") {
             let flowchart = Resource.Flowchartsequence.FlowchartMinJs.javascript
             let flowchatInit = Resource.Flowchartsequence.FlowchartInitJs.javascript(embeded: true)
-            scripts.appendContentsOf([flowchart, flowchatInit])
+            scripts.append(contentsOf: [flowchart, flowchatInit])
         }
         if languages.contains("seq") || languages.contains("sequence") {
             let under = Resource.Flowchartsequence.UnderscoreMinJs.javascript
             let seq = Resource.Flowchartsequence.SequenceDiagramMinJs.javascript
             let seqInit = Resource.Flowchartsequence.SequenceDiagramInitJs.javascript(embeded: true)
-            scripts.appendContentsOf([under, seq, seqInit])
+            scripts.append(contentsOf: [under, seq, seqInit])
         }
         if scripts.count > 0 {
             let raphael = Resource.Flowchartsequence.RaphaelMinJs.javascript
-            scripts.insert(raphael, atIndex: 0)
+            scripts.insert(raphael, at: 0)
         }
         return scripts
     }

@@ -8,21 +8,21 @@
 
 import Foundation
 #if os(OSX)
-let BundleBasePath: String = NSBundle(forClass: Renderer.self).bundlePath + "/Versions/A/Resources"
+let BundleBasePath: String = Bundle(for: Renderer.self).bundlePath + "/Versions/A/Resources"
 #elseif os(iOS)
 let BundleBasePath: String = NSBundle(forClass: Renderer.self).bundlePath
 #endif
 
 extension RawRepresentable where RawValue == String, Self: FullPathProvidable {
     public var fullPath: String { return  BundleBasePath + rawValue }
-    public var fileURL: NSURL {
+    public var fileURL: URL {
         if Configurator.shared.httpServerEnable {
-            return NSURL(string: "." + rawValue)!
+            return URL(string: "." + rawValue)!
         }
-        return NSURL(fileURLWithPath: fullPath)
+        return URL(fileURLWithPath: fullPath)
     }
     var javascript: Scripts.JavaScript { return Scripts.JavaScript(asset: fileURL) }
-    func javascript(type: Scripts.ContentType = .javascript, embeded: Bool = false) -> Scripts.JavaScript { return Scripts.JavaScript(asset: fileURL, type: type, embeded: embeded) }
+    func javascript(_ type: Scripts.ContentType = .javascript, embeded: Bool = false) -> Scripts.JavaScript { return Scripts.JavaScript(asset: fileURL, type: type, embeded: embeded) }
     var stylesheet: Scripts.StyleSheet { return Scripts.StyleSheet(asset: fileURL) }
 }
 
@@ -41,7 +41,7 @@ extension Array {
 extension Resource.Prism.Components {
     static func scripts(for language: String) -> [Scripts.JavaScript] {
         var scripts: [Scripts.JavaScript] = []
-        let name = language.lowercaseString
+        let name = language.lowercased()
         let enumBase = "/Resource/prism/components/"
         let base = "prism-\(name)"
         let extra = "prism-\(name)-extras"
@@ -57,5 +57,14 @@ extension Resource.Prism.Components {
         if let b = baseScript?.javascript { scripts.append(b) }
         if let b = extraScript?.javascript { scripts.append(b) }
         return scripts
+    }
+}
+
+
+extension Bool {
+    var unsafePointer: UnsafeMutablePointer<ObjCBool> {
+        let b = UnsafeMutablePointer<ObjCBool>.allocate(capacity: 1)
+        b.initialize(to: ObjCBool(self))
+        return b
     }
 }

@@ -11,20 +11,26 @@ import YAMLFrameworkOrdered
 
 
 extension String {
-    private struct FronMatter {
-        private static var pattern = "^-{3}\n(.*?\n)((?:-{3})|(?:\\.{3}))"
+    fileprivate struct FronMatter {
+        fileprivate static var pattern = "^-{3}\n(.*?\n)((?:-{3})|(?:\\.{3}))"
         static var regex: NSRegularExpression? {
-            return try? NSRegularExpression(pattern: pattern, options: .DotMatchesLineSeparators)
+            return try? NSRegularExpression(pattern: pattern, options: .dotMatchesLineSeparators)
         }
     }
     
-    var frontMatter: (M13OrderedDictionary?, Int) {
-        guard let result = FronMatter.regex?.firstMatchInString(self, options: NSMatchingOptions(rawValue: 0), range: NSMakeRange(0, characters.count)) else { return (nil, 0) }
-        let fronmater = (self as NSString).substringWithRange(result.rangeAtIndex(1))
+    var frontMatter: (M13OrderedDictionary<NSString, AnyObject>?, Int) {
+        guard let result = FronMatter.regex?.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, characters.count)) else { return (nil, 0) }
+        let fronmater = (self as NSString).substring(with: result.rangeAt(1))
         do {
-            let objects = try YAMLSerialization.objectsWithYAMLString(fronmater, options: kYAMLReadOptionStringScalars)
-            guard let first = objects.firstObject as? M13OrderedDictionary else { return (nil, 0) }
-            return (first, result.rangeAtIndex(0).length)
+            let objects = try YAMLSerialization.objects(withYAMLString: fronmater, options: kYAMLReadOptionStringScalars)
+            guard let first = objects.firstObject as? M13OrderedDictionary<NSString, AnyObject> else { return (nil, 0) }
+            return (first, result.rangeAt(0).length)
         } catch { return (nil, 0) }
     }
 }
+
+
+
+
+
+
