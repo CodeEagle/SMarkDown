@@ -14,8 +14,13 @@ let BundleBasePath: String = NSBundle(forClass: Renderer.self).bundlePath
 #endif
 
 extension RawRepresentable where RawValue == String, Self: FullPathProvidable {
-    public var fullPath: String { return BundleBasePath + rawValue }
-    public var fileURL: NSURL { return NSURL(fileURLWithPath: fullPath) }
+    public var fullPath: String { return  BundleBasePath + rawValue }
+    public var fileURL: NSURL {
+        if Configurator.shared.httpServerEnable {
+            return NSURL(string: "." + rawValue)!
+        }
+        return NSURL(fileURLWithPath: fullPath)
+    }
     var javascript: Scripts.JavaScript { return Scripts.JavaScript(asset: fileURL) }
     func javascript(type: Scripts.ContentType = .javascript, embeded: Bool = false) -> Scripts.JavaScript { return Scripts.JavaScript(asset: fileURL, type: type, embeded: embeded) }
     var stylesheet: Scripts.StyleSheet { return Scripts.StyleSheet(asset: fileURL) }

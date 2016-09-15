@@ -18,6 +18,7 @@ public extension String {
     }
 }
 public final class Configurator {
+    
     private enum Keys: String { case tags = "tags", extensions = "extensions", codeBlockAccessory = "codeBlockAccessory", tocRenderEnable = "tocRenderEnable", htmlTemplate = "htmlTemplate", htmlStyle = "htmlStyle", htmlHighlightingTheme = "htmlHighlightingTheme", htmlSyntaxHighlighting = "htmlSyntaxHighlighting", smartypantsEnable = "smartypantsEnable", frontMatterDecodeEnable = "frontMatterDecodeEnable", storeKey = "SMarkConfigurator"
     }
     private var initing = false
@@ -33,6 +34,25 @@ public final class Configurator {
     
     public static var shared = Configurator()
     public var renderer = Renderer()
+    var httpServerEnable = false
+    public func enableHttpServer(wiht htmlRoot: String) {
+        copyResource(to: htmlRoot)
+        httpServerEnable = true
+    }
+    
+    private func copyResource(to root: String) {
+        let folder = "Resource"
+        let bundle = NSBundle(forClass: Configurator.self)
+        guard let path = bundle.pathForResource(folder, ofType: nil) else { return }
+        let target = (root as NSString).stringByAppendingPathComponent(folder)
+        let fm = NSFileManager.defaultManager()
+        var isDir = ObjCBool(true)
+        if !fm.fileExistsAtPath(target, isDirectory: &isDir) {
+            do {
+                try fm.copyItemAtPath(path, toPath: target)
+            } catch { }
+        }
+    }
     var currentLanguages = [String]()
     var htmlTemplate = Resource.Templates.DefaultHandlebars {
         didSet {

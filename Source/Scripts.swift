@@ -16,6 +16,8 @@ protocol HTMLConvertible {
 }
 extension HTMLConvertible {
     func context(for option: Scripts.Option) -> [String : String] {
+        let old = Configurator.shared.httpServerEnable
+        if embedded { Configurator.shared.httpServerEnable = false }
         var context = [Scripts.Keys.typeName.rawValue : assetType.rawValue]
         let realOption = embedded ? .embedded : option
         func fulllink() { context[Scripts.Keys.url.rawValue] = assetURL.absoluteString }
@@ -30,6 +32,7 @@ extension HTMLConvertible {
         case .fulllink: fulllink()
         default: break
         }
+        Configurator.shared.httpServerEnable = old
         return context
     }
 }
