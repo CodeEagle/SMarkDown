@@ -128,7 +128,6 @@
 		16C75C471D6FDA5F0082DA10 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		16C76D771D6FE2C60082DA10 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = SOURCE_ROOT; };
 		16C76D7F1D7006830082DA10 /* PDFKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKit.swift; sourceTree = "<group>"; };
-		16D2D4301D8A4679008E2C92 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +179,6 @@
 		16C75BD91D6FD9930082DA10 = {
 			isa = PBXGroup;
 			children = (
-				16D2D4301D8A4679008E2C92 /* MyPlayground.playground */,
 				16C75C401D6FDA5F0082DA10 /* Source */,
 				16C75C331D6FDA490082DA10 /* Tests */,
 				16C75BE51D6FD9930082DA10 /* SMarkDown */,
